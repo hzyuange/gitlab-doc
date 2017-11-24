@@ -1,6 +1,3 @@
-# gitlab代码管理安装
-
-
 简介：<br>
 在Git项目仓库代码管理、团队协作非常好用，GitLab当然是不二之选，自己搭建服务器完全免费的喲。<br>
 环境：<br>
@@ -36,8 +33,8 @@ gitlab-ctl reconfigure
 #一定要改配置
 chown -R git:git /var/opt/gitlab/git-data/repositories
 vim /etc/gitlab/gitlab.rb
-    external_url 'http://git.ju-inc.com'
-    nginx['listen_addresses'] = ['git.ju-inc.com']
+    external_url 'http://git.diycode.me'
+    nginx['listen_addresses'] = ['git.diycode.me']
     nginx['listen_port'] = 8888
 vim /var/opt/gitlab/nginx/conf/gitlab-http.conf
 chown -R git:git /opt/gitlab
@@ -67,6 +64,6 @@ gitlab-rake gitlab:backup:restore BACKUP=xxxxx
 
 ### 安装成功效果
 
-    [http://git.ju-inc.com/](http://git.ju-inc.com/)
+    [http://git.diycode.me/](http://git.diycode.me/)
 
 注：完成上述步骤即实现Gitlab的原版安装，本文有任何错误或有任何疑问，欢迎留言说明。
